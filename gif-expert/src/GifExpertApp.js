@@ -1,19 +1,16 @@
 import React, { useState } from "react"
+import { AddCategory } from "./Components/AddCategory";
 
 export const GifExpertApp = () => {
 
     const [categories, setCategories] = useState(['One punch', 'Dragon Ball']);
-
-    const handleAdd =() => {
-        setCategories([...categories, 'Naruto']);  
-    }
-
+    
     return (
         <>
             <h1>GifExpertApp</h1>
-            <hr />
-            <button onClick={handleAdd}>Add</button>
-
+            <AddCategory setCategories={setCategories} />
+            <hr/>
+            
             <ol>
                 {
                     categories.map(category => {
