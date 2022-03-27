@@ -18,7 +18,7 @@ export const AddCategory = ({ setCategories }) => {
             alert('Por favor ingresar una categoria con mas de dos carácteres');
             return;
         }
-        setCategories( (cats)=> [ ...cats , inputValue ]);
+        setCategories( (cats)=> [  inputValue , ...cats ]);
         setInputValue('');        
     }
 
